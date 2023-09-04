@@ -1,23 +1,18 @@
 import  express from "express"
 import sumar  from "./funciones.js"
 import cors from 'cors';
+import { router } from "./routes/routes.js"
 
 const app = express()
 app.use(cors())
 app.use(express.json())
 
-app.get('/', (req, res) => {
-    res.send('Ejemplo de mi servidor de pagina Web')
-  })
-  app.get('/inicio', (req, res) => {
-    res.send('Esta es mi pagina de inicio')
-  })
-  app.get('/correo', (req, res) => {
-    res.send('Esta es mi pagina de correo')
-  })
+app.use('/usuarios',router);
 
-app.listen(4000, ()=> {
-    console.log('Servidor Corriendo en  http://localhost:4000/')
+ 
+
+app.listen(6000, ()=> {
+    console.log('Servidor Corriendo en  http://localhost:6000/')
 })
 
 var nombre = "Sandra Rios"
