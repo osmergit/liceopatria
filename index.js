@@ -11,8 +11,8 @@ app.use('/usuarios',router);
 
  
 
-app.listen(7000, ()=> {
-    console.log('Servidor Corriendo en  http://localhost:7000/')
+app.listen(8000, ()=> {
+    console.log('Servidor 🚀🚀Corriendo en  http://localhost:8000/')
 })
 
 var nombre = "Sandra Rios"
